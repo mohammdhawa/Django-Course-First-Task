@@ -17,7 +17,7 @@ class Book(models.Model):
     title = models.CharField(max_length=100)
     author = models.ManyToManyField(Author, related_name='book_author')
     publication_date = models.DateTimeField(auto_now=True)
-    price = models.DecimalField(max_digits=3, decimal_places=2)
+    price = models.DecimalField(max_digits=5, decimal_places=2)
 
     
     def __str__(self) -> str:
